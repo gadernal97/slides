@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    background-color: aquamarine;
+}
+.container{
+    max-width: 60rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+}
+ul{
+    list-style: none;
+}
+li{
+ display:inline-block;   
+ padding: 0 1.25rem;
+}
+li a{
+    text-decoration: none;
+    color: rgb(156, 31, 31);
+    font-size: 1.5rem;
+}
+li a:hover{
+    color: coral;
+}
+.nav-toggle{
+    display: none;
+    position: absolute;
+    top:1rem;
+    right:1rem
+}
+.hidden{
+    display: none;
+}
+.open{
+    height:100vh;
+}
+@media all and (max-width:720px) {
+    .container{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    nav{
+        height: 0;
+        width: 100%;
+        transition: 250ms height ease-in-out ;
+        overflow: hidden;
+    }
+    li{
+        display: block;
+        padding: 1rem 1.2rem;
+        text-align: center;
+    }
+    .nav-toggle{
+        display: block;
+        cursor: pointer;
+    }
+}
